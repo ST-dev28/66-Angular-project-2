@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="krepselis">
-    <div class="add">{{krepselis.qty}} pcs</div>
+    <div class="add" [ngClass]="{added: krepselis.qty > 0}">Added: {{krepselis.qty}} pcs</div>
   </div>
 
   <div class="produktas" *ngIf="produktas.nuolaida > 0" [ngClass]="{nuolaida: produktas.nuolaida > 0}">
