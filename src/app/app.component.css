@@ -167,6 +167,11 @@ table {
   background-color: #ffff;
 }
 
+.container .produktas.nuolaida {
+  background-color: yellow;
+  color: red;
+}
+
 .container .produktas .pavadinimas,
 .container .produktas .kiekis,
 .container .produktas .kaina {
@@ -197,6 +202,7 @@ table {
   padding: 15px;
   cursor: pointer;
   margin: 10px;
+  cursor: pointer;
 }
 
 .container .krepselis {

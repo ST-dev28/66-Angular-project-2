@@ -4,7 +4,7 @@
     <div class="add">{{krepselis.qty}} pcs</div>
   </div>
 
-  <div class="produktas" *ngIf="produktas.nuolaida > 0" [ngStyle]="{backgroundColor: 'yellow', color: 'red'}">
+  <div class="produktas" *ngIf="produktas.nuolaida > 0" [ngClass]="{nuolaida: produktas.nuolaida > 0}">
     <img src="https://www.ermitazas.lt/out/pictures/master/product/1/323016.jpg" alt="Produktas">
     <h3 class="pavadinimas">{{produktas.pavadinimas}}</h3>
     <div class="kiekis">{{produktas.kiekis}} pcs</div>
