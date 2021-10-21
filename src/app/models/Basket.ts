@@ -4,11 +4,11 @@ export class Basket{
     public constructor(qty: number) {
         this.qty = qty = 0;
 }
-public addToBucket(): void {
+public addToBasket(): void {
         this.qty++;
         
     }
-    public removeFromBucket(): void {
+    public removeFromBasket(): void {
         if(this.qty > 0) {
            this.qty--; 
         } else if(this.qty === 0) {

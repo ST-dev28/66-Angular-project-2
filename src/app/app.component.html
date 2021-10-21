@@ -12,7 +12,7 @@
   </div>
 
   <div class="buttons">
-    <button (click)="produktas.pirkti()" (click)="krepselis.removeFromBucket()" [disabled]="produktas.kiekis <=0">remove</button>
-    <button (click)="produktas.grazinti()" (click)="krepselis.addToBucket()">add to basket</button>
+    <button (click)="produktas.perka()" (click)="krepselis.addToBasket()">add to basket</button>
+    <button (click)="produktas.grazina()" (click)="krepselis.removeFromBasket()" [disabled]="produktas.kiekis <=0">remove</button>
   </div>
 </div>

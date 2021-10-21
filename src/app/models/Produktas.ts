@@ -10,15 +10,12 @@ export class Produktas {
         this.nuolaida = nuolaida;
         this.kiekis = kiekis;
     }
-    public pirkti(): void {
-        if (this.kiekis < 0) {
+    public grazina(): void {
         this.kiekis++;
-        } else if (this.kiekis === 0) {
-            return;
-        }
     }
-    public grazinti(): void {
-        if (this.kiekis >0) {
+    
+    public perka(): void {
+        if (this.kiekis > 0) {
         this.kiekis--;  
         } else if(this.kiekis === 0) {
             return;

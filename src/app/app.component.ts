@@ -12,7 +12,7 @@ export class AppComponent {
   public krepselis: Basket;
 
   public constructor() {
-    this.produktas = new Produktas("Kamuolys", 2, 20, 10);
+    this.produktas = new Produktas("Kamuolys", 4, 20, 10);
     this.krepselis = new Basket(0);
   }
 }
