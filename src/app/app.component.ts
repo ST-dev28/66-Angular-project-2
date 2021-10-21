@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { Basket } from './models/Basket';
-import { Produktas } from './models/Produktas';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {Prezidentas} from './models/prezidentas';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +7,5 @@ import { Produktas } from './models/Produktas';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public produktas: Produktas;
-  public krepselis: Basket;
-
-  public constructor() {
-    this.produktas = new Produktas("Kamuolys", 4, 20, 10);
-    this.krepselis = new Basket(0);
-  }
 }
+
