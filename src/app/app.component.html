@@ -1,15 +1,18 @@
-<div class="produktas">
-  <h3 class="pavadinimas" *ngIf="produktas.nuolaida > 0" [ngStyle]="{backgroundColor: 'yellow', color: 'red'}">{{produktas.pavadinimas}}</h3>
-  <div klass="kaina">{{produktas.kaina}} EUR</div>
-</div>
+<div class="container">
 
-<div class="skaitliukas">
-  <div class="skaicius">{{produktas.kiekis}} vnt</div>
+  <div class="krepselis">
+    <div class="add">{{krepselis.qty}} pcs</div>
+  </div>
 
-  <img src="https://www.ermitazas.lt/out/pictures/master/product/1/323016.jpg" alt="Produktas">
-</div>
+  <div class="produktas" *ngIf="produktas.nuolaida > 0" [ngStyle]="{backgroundColor: 'yellow', color: 'red'}">
+    <img src="https://www.ermitazas.lt/out/pictures/master/product/1/323016.jpg" alt="Produktas">
+    <h3 class="pavadinimas">{{produktas.pavadinimas}}</h3>
+    <div class="kiekis">{{produktas.kiekis}} pcs</div>
+    <div klass="kaina">{{produktas.kaina}} EUR</div>
+  </div>
 
-<div class="buttons">
-  <button (click)="produktas.padidinti()" [disabled]="produktas.kiekis <=0">Prideti +1</button>
-  <button (click)="produktas.sumazinti()">Atimti -1</button>
+  <div class="buttons">
+    <button (click)="produktas.pirkti()" (click)="krepselis.removeFromBucket()" [disabled]="produktas.kiekis <=0">remove</button>
+    <button (click)="produktas.grazinti()" (click)="krepselis.addToBucket()">add to basket</button>
+  </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Produktas } from './models/produktas';
+import { Basket } from './models/Basket';
+import { Produktas } from './models/Produktas';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,10 @@ import { Produktas } from './models/produktas';
 })
 export class AppComponent {
   public produktas: Produktas;
+  public krepselis: Basket;
 
   public constructor() {
     this.produktas = new Produktas("Kamuolys", 2, 20, 10);
+    this.krepselis = new Basket(0);
   }
 }
